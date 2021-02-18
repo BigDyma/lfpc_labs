@@ -28,11 +28,9 @@ def parseString(str):
 
 def checkAutomaton(graph, source, word):
     for neighbour in graph[source]:
-        checker = True
         for key in neighbour:
             if neighbour[key] == word[0]:
                 # print(source + " -> " + key + " prin " + neighbour[key] +  " word " + word)  
-                checker = False
                 word = word[1:]
                 if len(word) == 0 and key == "None":
                     return True
